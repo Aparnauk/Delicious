@@ -1,45 +1,37 @@
 
+/* main div */
 
-
-.con{
+body{
     margin: 0px;
     padding: 0px;
     height: 100%;
-    width: 100%;
-    
+    width: 100%; 
+    overflow-x: hidden;
 }
+
+/* first div */
 
 .firstdiv{
     height: 80%;
     width: 100%;
-
 }
+
+/* navbar */
 
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
     margin-top: 20px;
     position: inherit;
     font-size: 20px;
 }
 
-.colour{
-    height: 40%;
-    width: 60%;
-    margin-top: 10px;
-    margin-left: 350px;
-    border-radius: 500px 1000px 100px 1006px ;
-    position: relative;
-}
-
-
 .log{
     font-family: Inter;
-    font-weight: 500vh;
+    font-size: 20px;
     font-weight: bolder;
+    margin-left: 10%;
 }
 
 .list{
@@ -62,13 +54,24 @@
 .img img{
     height: 30px;
     width: 30px;
+    margin-right: 115px;
+}
+
+/* second div delicious */
+
+.colour{
+    height: 40%;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 20%;
+    border-radius: 500px 1000px 100px 1006px ;
+    position: relative;
 }
 
 .heading{
     font-size: 150px;
     text-align: center;
     margin-top: 80px;
-    margin-right: 50px;
 }
 
 .subhead{
@@ -82,6 +85,9 @@
     color: #97292D;
 }
 
+
+/* menu head */
+
 .menu{
     height: 150PX;
     width: 100%;
@@ -94,19 +100,34 @@
     font-family: Tapestry;
 }
 
+/* carousel bar */
+
 .wrapper .carousel{
     white-space: nowrap;
     font-size: 0px;
     cursor: pointer;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
+
+.carousel.dragging{
+    scroll-behavior:auto ;
+    cursor: grab;
+}
+
+.carousel.dragging img{
+    pointer-events: none;
+}
+
 
 .carousel{
     height: 500px;
 }
 
 .wrapper{
+    max-width: 1200px;
     position: relative;
+ 
 }
 
 .wrapper i{
@@ -154,10 +175,11 @@
 #img7{
     /* top: 76.90px; */
     position: relative;
-}
+} 
 
 .wrapper i:first-child{
     left: -23px;
+    display: none;
 }
 
 .wrapper i:last-child{
@@ -171,8 +193,12 @@
     margin-left: 20px;
 }
 
+.carousel img:first-child{
+    margin-left: 0px;
+} 
+
 .wrapper{
-    max-width: 1500px;
+    max-width: 1200px;
 }
 
 .body{
@@ -183,6 +209,8 @@
     padding: 0, 10px;
     margin-left: 200px;
 }
+
+/* our story div */
 
 .story{
    width: 100%;
@@ -205,14 +233,23 @@
     margin-left: 100px;
     position: absolute;
     margin-top: 100px;
+    color: white; 
+    font-size: 85px; 
+    font-weight: 400; 
 }
 
 #pr{
     margin-left: 100px;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 250px;
+    width: 100%; 
+    color: rgba(255, 255, 255, 0.70); 
+    font-size: 29px;
+    font-weight: 400; 
+    word-wrap: break-word
 }
 
+/* subscribe page */
 .subscribe{
     width: 100%;
     height: 800px;
@@ -249,21 +286,31 @@
 
 .sub3{
     background-color: white; 
-    width: 1000px; 
+    width: 80%; 
     height: 80px; 
-    margin-left: 115px;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input{
+    width: 650px;
+    height: 75px;
+    font-size: 25px;
+    border: none;
 }
 
 .sub3 button{
     height: 60px;
     width: 300px;
-    margin-left: 680px;
-    margin-top: 10px;
     font-size: 25px;
     font-family: inter;
     font-weight: bold;
     color: white;
 }
+
+/* contact page */
 
 .info{
     display: flex;
@@ -289,5 +336,109 @@
     height: 30px;
 }
 
+.uparrow button{
+    width: 3%; 
+    height: 6%; 
+    left: 90%; 
+    position: absolute; 
+    background: white; 
+    border-radius: 6px; 
+    overflow: hidden
+}
+
+
+@media all and (max-width:500px){
+
+    .colour{margin-left: 50px; width: 300px; }
+    .subhead{font-size: 35px;}
+    .menu{height: 90px;}
+    .menu h1{font-size: 50px;margin: 20px;}
+
+    .carousel img{width: calc(100%/1 );}
+    .carousel img{width: 100%; }
+
+    body{overflow-x: hidden;}
+
+    .image{margin-left: 20px; background-size: cover; height: 250px;}
+    #our{margin-left: 20px; margin-top: 50px; font-size: 35px;}
+    #pr{font-size: 10px; margin-top: 110px; margin-left: 20px; width: 220px;}
+    
+    }
+
+@media all and (max-width:800px) {
+
+    body{overflow-x: hidden;}
+
+    .log{font-size: 15px;}
+    .list{font-size: 15px;}
+    .listing{margin-left: 20px;}
+    .img img{margin-right: 40px;}
+
+    .colour{height: 10%; }
+    .heading{font-size: 55px;}
+    .subhead{font-size: 20px; margin-top: 10px;}
+
+    .menu{height: 90px;}
+    .menu h1{font-size: 50px;margin: 20px;}
+
+    .carousel img{width: calc(100% /2); padding: 9px;}
+
+    body{overflow-x: hidden;}
+
+    .story{height: auto;}
+    .image{margin-left: 20px; background-size: cover; height: 250px;}
+    #our{margin-left: 50px; margin-top: 50px; font-size: 50px;}
+    #pr{font-size: 12px; margin-top: 120px; margin-left: 50px; width: 420px;}
+
+    .sub1{margin-left: 20px; width: 90%;}
+    .sub2{width: 90%; }
+    .subtext{font-size: 20px; }
+    .sub3{ width: 80%;height: 55px;}
+    input{width: 500px; height: 52px; font-size: 15px;}
+    .sub3 button{height: 40px; width: 99px; font-size: 15px;}
+
+}
+
+@media all and (min-width:801px) {
+
+    body{overflow-x: hidden;}
+
+    .log{font-size: 20px;}
+    .list{font-size: 20px;}
+    .listing{margin-left: 20px;}
+    .img img{margin-right: 60px;}
+
+    .colour{height: 10%; }
+    .heading{font-size: 85px;}
+    .subhead{font-size: 30px; margin-top: 10px;}
+
+}
+
+@media all and (min-width:1000px) {
+
+    body{overflow-x: hidden;}
+
+    .log{font-size: 20px;}
+    .list{font-size: 20px;}
+    .listing{margin-left: 20px;}
+    .img img{margin-right: 60px;}
+
+}
+
+@media all and (min-width:1030px) {
+
+    body{overflow-x: hidden;}
+
+    .log{font-size: 20px;margin-left: 10%;}
+    .list{font-size: 20px;}
+    .listing{margin-left: 50px;}
+    .img img{ height: 30px; width: 30px;margin-right: 115px;}
+
+    .colour{  height: 40%; width: 70%; margin-top: 10px; margin-left: 15%;}
+    .heading{font-size: 150px;}
+    .subhead{font-size: 50px; margin-top: 10px;}
+
+
+}
 
 
