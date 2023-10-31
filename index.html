@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,24 +33,27 @@
 
         <div class="firstdiv">
 
-            <!-- navbar -->
-            <div class="nav">
 
-                <div id="icon" class="log">Logo.</div>
+            <header class="nav">
 
-                <div class="list">
-                    <div class="listing"><a href="#">Home</a></div>
-                    <div class="listing"><a href="#menu">Menu</a></div>
-                    <div class="listing"><a href="#contact">Contact</a></div>
+                <div class="toggle-btn" onclick="myFunction();">
+                    <i class="fas fa-bars"></i>
                 </div>
 
-                <div class="img"> <img src="./images/bag.png" alt="img"> </div>
+                <div id="icon" class="logo">
+                    <h2>Logo.</h2>
+                </div>
 
-                <!-- <label id="icon">
-                    <i class="fas fa-bars"></i>
-                </label> -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li class="contact"><a href="#contact">Contact</a></li>
+                        <li><div id="img"> <img src="./images/bag.png" alt="img"> </div></li>
+                    </ul>
+                </nav>
 
-            </div>
+            </header>
 
             <!-- delicious -->
 
@@ -98,6 +101,14 @@
             </div>
         </div>
 
+        <div class="uparrow">
+            <button>
+
+                <a href="#icon" style="text-decoration: none; color: black;"><i class="fas fa-arrow-up"></i></a>
+
+            </button>
+        </div>
+
         <!-- story -->
 
         <div class="story">
@@ -126,7 +137,8 @@
 
 
                     <form name="submit-to-google-sheet" class="sub3">
-                        <input id="email-field" name="Email" type="email" placeholder="Type your email and get" style="color: gray;" required>
+                        <input id="email-field" name="Email" type="email" placeholder="Type your email and get"
+                            style="color: gray;" required>
                         <button type="submit" style="background-color:#97292D ;">Subscribe</button>
                     </form>
                     <span id="msg" style="color: white;"></span>
@@ -137,7 +149,7 @@
             <!-- contact -->
 
             <div class="info">
-                <div id="contact" class="contact">Contact</div>
+                <div id="contact" class="contac">Contact</div>
                 <div class="navigation">Navigation</div>
                 <div class="follows">Follow us</div>
             </div>
@@ -171,26 +183,39 @@
 
     </div>
 
+    <!-- toggle button -->
+    <script type="text/javascript">
+
+function myFunction(){
+    var navbar = document.getElementById('nav');
+    navbar.classList.toggle('show');
+}
+
+    </script>
+
     <!-- button script for subscribe -->
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzoveOkce6mXKN_OQ-iqSjC2XQvI1oMkIvXypVhui-_r4tHLKd1lvrIkaPmYfIILA6U/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Thank You For Subscribing!"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-             })
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank You For Subscribing!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-      </script>
+
+
+
+    </script>
 
 </body>
 

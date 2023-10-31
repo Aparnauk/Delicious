@@ -19,45 +19,65 @@ body{
 /* navbar */
 
 .nav{
-    display: flex;
+    display: inline-block;
+    width: 100%;
+    height: 100px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
-    position: inherit;
+    position: relative;
     font-size: 20px;
 }
 
-.log{
+.logo{
     font-family: Inter;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
     margin-left: 10%;
+    float: left;
+    padding: 20px;
 }
 
-.list{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+nav{
     font-family: Inter;
     font-weight: 300px;
+    float: right;
 }
 
-.listing{
-    margin-left: 50px;
+nav ul li{
+    display: inline-block;
+    font-family: Inter;
+    padding: 10px;
 }
 
-.listing a{
+.contact{
+    margin-right:400px;
+}
+
+
+nav ul li a{
     text-decoration: none;
+    display: inline-block;
     color: black;
+    font-weight: 600px;
 }
 
-.img img{
-    height: 30px;
-    width: 30px;
-    margin-right: 115px;
+.toggle-btn{
+    width: 35px;
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    display: none;
 }
 
-/* second div delicious */
+.toggle-btn span{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    color: black ;
+}
+
+
 
 .colour{
     height: 40%;
@@ -322,6 +342,8 @@ input{
     font-family: Inter;
 }
 
+
+
 .num{
     display: flex;
     align-items: center;
@@ -343,7 +365,8 @@ input{
     position: absolute; 
     background: white; 
     border-radius: 6px; 
-    overflow: hidden
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -369,17 +392,12 @@ input{
 
     body{overflow-x: hidden;}
 
-    .log{font-size: 15px;}
-    .list{font-size: 15px;}
-    .listing{margin-left: 20px;}
-    .img img{margin-right: 40px;}
-
-    .colour{height: 10%; }
+    .colour{height: 10%; margin-top: 30%; }
     .heading{font-size: 55px;}
     .subhead{font-size: 20px; margin-top: 10px;}
 
     .menu{height: 90px;}
-    .menu h1{font-size: 50px;margin: 20px;}
+    .menu h1{font-size: 50px; text-align: center;}
 
     .carousel img{width: calc(100% /2); padding: 9px;}
 
@@ -389,26 +407,38 @@ input{
     .image{margin-left: 20px; background-size: cover; height: 250px;}
     #our{margin-left: 50px; margin-top: 50px; font-size: 50px;}
     #pr{font-size: 12px; margin-top: 120px; margin-left: 50px; width: 420px;}
+    
 
-    .sub1{margin-left: 20px; width: 90%;}
+    .sub1{margin-left: 20px; width: 90%; margin-top: 0;}
     .sub2{width: 90%; }
     .subtext{font-size: 20px; }
     .sub3{ width: 80%;height: 55px;}
     input{width: 500px; height: 52px; font-size: 15px;}
-    .sub3 button{height: 40px; width: 99px; font-size: 15px;}
+    .sub3 button{height: 40px; width: 99px; font-size: 15px; }
 
+    .info{font-size: 15px;}
+    .navigation{margin-right: 70px;}
+    .follows{margin-right: 9px;}
+}
+@media all and (max-width:900px){
+    .logo{font-size: 15px;}
+    nav{font-size: 15px; display: none; width: 100%; border-top: 1px solid;}
+    nav.show{display: block;}
+    nav ul li{display: flex; padding: 1px;}
+    #img img{width: 30px; height: 30px;}
+    .toggle-btn{display: block; }
+    nav ul{position: fixed; width: 100%;  background: #F4E8DC; text-align: center; }
+    #contact { margin-right: 80px;}
+    
 }
 
 @media all and (min-width:801px) {
 
     body{overflow-x: hidden;}
 
-    .log{font-size: 20px;}
-    .list{font-size: 20px;}
-    .listing{margin-left: 20px;}
-    .img img{margin-right: 60px;}
 
-    .colour{height: 10%; }
+
+    /* .colour{height: 10%; } */
     .heading{font-size: 85px;}
     .subhead{font-size: 30px; margin-top: 10px;}
 
@@ -418,23 +448,18 @@ input{
 
     body{overflow-x: hidden;}
 
-    .log{font-size: 20px;}
-    .list{font-size: 20px;}
-    .listing{margin-left: 20px;}
-    .img img{margin-right: 60px;}
-
 }
 
 @media all and (min-width:1030px) {
 
     body{overflow-x: hidden;}
 
-    .log{font-size: 20px;margin-left: 10%;}
-    .list{font-size: 20px;}
-    .listing{margin-left: 50px;}
-    .img img{ height: 30px; width: 30px;margin-right: 115px;}
+    .logo{font-size: 15px;}
+    nav{font-size: 20px;}
+    #img img{ height: 30px; width: 30px; margin-right: 115px;}
+   
 
-    .colour{  height: 40%; width: 70%; margin-top: 10px; margin-left: 15%;}
+    #colour{  height: 40%; width: 70%; margin-top: 10px; margin-left: 15px;}
     .heading{font-size: 150px;}
     .subhead{font-size: 50px; margin-top: 10px;}
 
