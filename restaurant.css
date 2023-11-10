@@ -394,10 +394,10 @@ input{
     .heading{font-size: 55px;}
     .subhead{font-size: 20px; margin-top: 10px;}
 
-    .menu{height: 90px;}
+    .menu{height: 90px; margin-top: 80px;}
     .menu h1{font-size: 50px; text-align: center;}
 
-    .carousel img{width: calc(100% /2); padding: 9px; height: 50%;}
+    .carousel img{width: calc(100% /3); padding: 20px; height: 40%; margin: 0px;}
 
     body{overflow-x: hidden;}
 
@@ -405,6 +405,11 @@ input{
     .image{margin-left: 20px; background-size: cover; height: 250px;}
     #our{margin-left: 50px; margin-top: 50px; font-size: 50px;}
     #pr{font-size: 12px; margin-top: 120px; margin-left: 50px; width: 420px;}
+    
+    .wrapper{height: 400px;}
+    .wrapper i{width: 30px; height: 30px;}
+    #left{padding-bottom: 15px;}
+    #right{padding-bottom: 15px;}
     
 
     .sub1{margin-left: 20px; width: 90%; margin-top: 0;}
@@ -417,6 +422,13 @@ input{
     .info{font-size: 15px;}
     .navigation{margin-right: 70px;}
     .follows{margin-right: 9px;}
+
+    .uparrow button{width: 30px; height: 30px; margin-right: 70px;}
+    .num{font-size: 10px;}
+    .num h4{margin-right: 50px;}
+    #footer-text{margin-left: 40px;}
+    #contact{margin-left: 10px;}
+    .icons img{font-size: 10px; line-height: 10px;}
 }
 @media all and (max-width:900px){
     .logo{font-size: 15px;}
