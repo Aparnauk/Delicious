@@ -431,6 +431,7 @@ input{
     .icons img{font-size: 10px; line-height: 10px;}
 }
 @media all and (max-width:900px){
+    body{overflow-x: hidden;}
     .logo{font-size: 15px;}
     nav{font-size: 15px; display: none; width: 100%; border-top: 1px solid;}
     nav.show{display: block;}
