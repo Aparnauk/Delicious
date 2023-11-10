@@ -399,7 +399,6 @@ input{
 
     .carousel img{width: calc(100% /3); padding: 20px; height: 40%; margin: 0px;}
 
-    body{overflow-x: hidden;}
 
     .story{height: auto;}
     .image{margin-left: 20px; background-size: cover; height: 250px;}
