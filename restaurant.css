@@ -77,8 +77,6 @@ nav ul li a{
     color: black ;
 }
 
-
-
 .colour{
     height: 40%;
     width: 60%;
@@ -399,7 +397,7 @@ input{
     .menu{height: 90px;}
     .menu h1{font-size: 50px; text-align: center;}
 
-    .carousel img{width: calc(100% /2); padding: 9px;}
+    .carousel img{width: calc(100% /2); padding: 9px; height: 50%;}
 
     body{overflow-x: hidden;}
 
@@ -410,11 +408,11 @@ input{
     
 
     .sub1{margin-left: 20px; width: 90%; margin-top: 0;}
-    .sub2{width: 90%; }
+    .sub2{width: 90%;}
     .subtext{font-size: 20px; }
     .sub3{ width: 80%;height: 55px;}
     input{width: 500px; height: 52px; font-size: 15px;}
-    .sub3 button{height: 40px; width: 99px; font-size: 15px; }
+    .sub3 button{height: 40px; width: 90px; font-size: 13px; }
 
     .info{font-size: 15px;}
     .navigation{margin-right: 70px;}
